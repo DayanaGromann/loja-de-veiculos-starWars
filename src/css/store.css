@@ -1,0 +1,112 @@
+/* Screen content */
+.storeScreenContent {
+  display: block;
+  grid-template-columns: 1fr 3fr;
+  grid-template-areas:
+    "header header"
+    "filter vehicles";
+  gap: 10px;
+}
+
+/* vehicles list content */
+.VehiclesList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin: 15px;
+  grid-area: vehicles;
+}
+
+.carregando {
+  grid-area: vehicles;
+}
+
+/* About the card of each vehicle */
+
+.itemCard {
+  border: solid 1px rgba(0, 0, 0, 0.5);
+  border-radius: 15px;
+  width: 300px;
+  height: 500px;
+  text-align: center;
+}
+
+.itemCard img {
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  width: 100%;
+  height: 300px;
+}
+
+.vehicleSpecification {
+  display: none;
+}
+
+.itemCard:hover .vehicleSpecification {
+  display: block;
+}
+
+.itemCard:hover .initialCard {
+  display: none;
+}
+
+.vehicleSpecification button {
+  background-color: rgb(8, 8, 94);
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+/* Filter style */
+.filterContainer {
+  border-radius: 15px;
+  grid-area: filter;
+  padding: 10px;
+}
+.filterContainer form {
+  margin-top: 10px;
+  justify-content: center;
+  align-items: left;
+  flex-direction: column;
+}
+.filterContainer form h1 {
+  align-self: center;
+}
+.filterButton {
+  width: 80%;
+  align-self: center;
+}
+
+.openFilter {
+  display: flex;
+}
+
+.closeFilter {
+  display: none;
+}
+
+.filterApplyButton {
+  background-color: rgb(8, 8, 94);
+  color: white;
+  border-radius: 15px;
+  padding: 5px;
+  margin-top: 15px;
+}
+@media (min-width: 950px) {
+  .storeScreenContent {
+    display: grid;
+  }
+  .filterContainer {
+    border: solid 1px rgba(0, 0, 0, 0.5);
+    justify-content: flex-start;
+    margin: 15px;
+  }
+
+  .filterButton {
+    display: none;
+  }
+  .filterContainer form {
+    display: flex;
+  }
+}

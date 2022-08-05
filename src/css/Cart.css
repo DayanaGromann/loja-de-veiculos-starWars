@@ -1,0 +1,54 @@
+.cartScreen {
+  display: flex;
+  justify-content: center;
+}
+
+.itemsContainer {
+  margin-top: 20px;
+  display: flex;
+  width: fit-content;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+.formContainer h1 {
+  font-size: 1.5em;
+}
+.confirmButton {
+  background-color: rgb(8, 8, 94);
+  color: white;
+  padding: 5px;
+  margin-top: 15px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.formField {
+  display: flex;
+  flex-direction: column;
+}
+.error {
+  color: red;
+  font-size: 0.7em;
+}
+
+@media (min-width: 445px) {
+  .itemsContainer {
+    padding: 50px;
+    border-radius: 15px;
+    border: solid 1px rgba(0, 0, 0, 0.5);
+    margin: 15px;
+  }
+}
+
+@media (min-width: 700px) {
+  .formField {
+    width: 500px;
+  }
+}
